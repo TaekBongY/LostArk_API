@@ -7,9 +7,10 @@
 
 html,
 body {
-  @apply bg-white dark:bg-gray-950;
+  @apply bg-white dark:bg-gray-950; /* bg-white와 dark:bg-gray-950 유틸리티 클래스를 html, body에 적용 */
 
   @media (prefers-color-scheme: dark) {
     color-scheme: dark;
   }
 }
+/* 설명: html, body 요소의 배경색을 기본은 흰색, 다크 모드일 때 gray-950으로 설정합니다. */

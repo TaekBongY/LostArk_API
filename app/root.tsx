@@ -6,9 +6,11 @@ import {
   Scripts,
   ScrollRestoration,
 } from "react-router";
-
 import type { Route } from "./+types/root";
 import "./app.css";
+import Header from "./components/Header";
+import ContentItems from "./components/ContentItems";
+import "./styles/globals.css";
 
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -33,7 +35,18 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body>
-        {children}
+        {/* 이 부분에 페이지 중앙 정렬 및 max-width 컨테이너를 추가합니다. */}
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          {/* 설명:
+          container: 반응형 max-width와 기본 좌우 패딩을 적용.
+          mx-auto: 좌우 마진을 자동으로 설정하여 블록 요소를 중앙 정렬.
+          px-4: 기본적으로 좌우 패딩 1rem (16px)
+          sm:px-6: small 브레이크포인트(기본 640px) 이상에서는 좌우 패딩 1.5rem (24px)
+          lg:px-8: large 브레이크포인트(기본 1024px) 이상에서는 좌우 패딩 2rem (32px) */}
+          <Header />
+          {children}
+          <ContentItems />
+        </div>
         <ScrollRestoration />
         <Scripts />
       </body>
