@@ -44,7 +44,6 @@ export function Layout({ children }: { children: React.ReactNode }) {
           <Header />
           <main className="flex-1 pt-16"> {/* 이 부분을 수정합니다: <main> 태그 추가 및 flex-1, pt-16 클래스 적용 */}
           {children} {/* 기존에 {children}이 있던 위치 */}
-          <ContentItems />
           </main>
         <ScrollRestoration />
         <Scripts />
