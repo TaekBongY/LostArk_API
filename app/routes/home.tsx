@@ -4,7 +4,7 @@ import { useArmoriesInfo } from "../hooks/useArmoriesInfo";
 import ContentItems from "../components/ContentItems";
 
 export default function HomePage() {
-  const characterName = "";
+  const characterName = "모지오";
 
   const {
     data: characterData,

@@ -41,7 +41,7 @@ const ContentItems: React.FC<ContentItemsProps> = ({ characterDataList }) => {
 
   return (
     <div className="bg-gray-100 dark:bg-gray-900 py-6">
-      <div className="container mx-auto">
+      <div className="container mx-auto my-auto">
         <div ref={masonryContainerRef} className="masonry-grid">
           {characterDataList.map((char, idx) => (
             <div
@@ -81,7 +81,7 @@ const ContentItems: React.FC<ContentItemsProps> = ({ characterDataList }) => {
                 </div>
               )}
 
-              {/* 아머리 정보 예시 (Stats 중 일부만 보여주기) */}
+              {/* 아머리 정보
               {char.armory && char.armory.Stats && (
                 <div className="mt-3 text-sm">
                   <strong>특성</strong>
@@ -93,7 +93,7 @@ const ContentItems: React.FC<ContentItemsProps> = ({ characterDataList }) => {
                     ))}
                   </ul>
                 </div>
-              )}
+              )} */}
             </div>
           ))}
         </div>
