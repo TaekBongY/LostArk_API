@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
 import { getArmoriesInfo } from "../services/API";
+import type { Armory } from "../types";
 
 export function useArmoriesInfo(userId: string | null) {
-  const [data, setData] = useState(null);
+  const [data, setData] = useState<Armory | Armory[] | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<Error | null>(null);
 

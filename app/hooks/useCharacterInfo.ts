@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
 import { getCharacterInfo } from "../services/API";
+import type { CharacterInfo } from "../types";
 
 export function useCharacterInfo(userId: string | null) {
-  const [data, setData] = useState(null);
+  const [data, setData] = useState<CharacterInfo | CharacterInfo[] | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<Error | null>(null);
 
